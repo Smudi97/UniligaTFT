@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <title>TFT Ingame POV Overlay</title>
+    <link rel="stylesheet" href="./IngamePOV.css">
+
+</head>
+
+<body>
+  <img src="./POVBug.png">
+  <span id="AktivesPOV"></span>
+
+    <!-- JAVASCRIPT STUFF -->
+    <script src="./Updater.js"></script>
+    <script src="./regex-operation.js"></script>
+    <script>
+        const settings = {
+            'string': {
+              'B1' :'AktivesPOV',
+        }}
+
+        const spreadsheetID = '1ZGBhSTBxykZOjKmOdzKOPGLR2U7vP7C99gbdYNboM2c';
+        const worksheetName = 'Output';
+        const apiKey = "AIzaSyCpf1Yn1B7b4P9W5sazp6EcfgDM0Ati2Zg";
+        const updateInterval = 3000;
+
+        const u = new GraphicsUpdater(settings, spreadsheetID, worksheetName, apiKey, updateInterval, false);
+        u.addOperation('regex', regexOperation);
+        u.startUpdating();
+    </script>
+</body>

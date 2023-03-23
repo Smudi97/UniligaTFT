@@ -1,0 +1,56 @@
+@font-face{
+  font-family: 'Zona Pro';
+  font-style: normal;
+  color: white;
+  src: url('./ZonaPro-Regular.otf');
+}
+
+@font-face{
+  font-family: 'Zona Pro';
+  font-style: normal;
+  font-weight: bold;
+  color: white;
+  src: url('./ZonaPro-Bold.otf');
+}
+
+*{
+  box-sizing: border-box;
+  /* outline: solid coral; */
+}
+
+body{
+font-family: 'Zona Pro';
+background-color: rgba(0, 0, 0, 0); margin: 0px auto; overflow: hidden; 
+}
+
+#AktuelleLobby{
+  color:white;
+  font-size:25px;
+  font-weight: bold;
+  position: absolute;
+  text-align: center;
+  right: 34px;
+  text-transform: uppercase;
+  top: 4px;
+  width: 140px;
+  height:1.15em;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+#AktuelleStage{
+  color:white;
+  font-size:25px;
+  font-weight: bold;
+  position: absolute;
+  text-align: center;
+  left: 18px;
+  text-transform: uppercase;
+  top: 886px;
+  width: 222px;
+  height:1.15em;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
