@@ -1,0 +1,121 @@
+@font-face{
+  font-family: 'Zona Pro';
+  font-style: normal;
+  color: white;
+  src: url('./ZonaPro-Regular.otf');
+}
+
+@font-face{
+  font-family: 'Zona Pro';
+  font-style: normal;
+  font-weight: bold;
+  color: white;
+  src: url('./ZonaPro-Bold.otf');
+}
+
+*{
+  box-sizing: border-box;
+  /* outline: solid coral; */
+}
+
+body{
+font-family: 'Zona Pro';
+background-color: rgba(0, 0, 0, 0); margin: 0px auto; overflow: hidden; 
+}
+
+.Tabelle{
+  color:white;
+  font-size:35px;
+  font-weight:100;
+  font-weight:bold;
+  height:1.15em;
+}
+
+.Zeile0{
+  position:absolute;
+  top:257px;
+  font-size:28px;
+  font-weight:normal;
+}
+
+.Zeile1{
+  position:absolute;
+  top:304px;
+}
+
+.Zeile2{
+  position:absolute;
+  top:368px;
+}
+
+.Zeile3{
+  position:absolute;
+  top:432px;
+}
+
+.Zeile4{
+  position:absolute;
+  top:496px;
+}
+
+.Zeile5{
+  position:absolute;
+  top:560px;
+}
+
+.Zeile6{
+  position:absolute;
+  top:624px;
+}
+
+.Zeile7{
+  position:absolute;
+  top:688px;
+}
+
+.Zeile8{
+  position:absolute;
+  top:752px;
+}
+
+.Spalte1{
+  position:absolute;
+  left:680px;
+}
+
+.Spalte2{
+  position:absolute;
+  left:1150px;
+}
+
+.Spieler{
+  width:450px;
+  text-align:left;
+  overflow:hidden;
+  white-space:nowrap;
+  text-overflow:ellipsis;
+}
+
+.Punkte{
+  width: 90px;
+  text-align:right;
+  overflow:hidden;
+  white-space:nowrap;
+  text-overflow:ellipsis;
+}
+
+/* #TabelleSpieler1{
+  color:white;
+  font-size:25px;
+  font-weight: bold;
+  position: absolute;
+  text-align: left;
+  left: 100px;
+  text-transform: uppercase;
+  top: 48px;
+  width: 250px;
+  height:1.15em;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+} */
