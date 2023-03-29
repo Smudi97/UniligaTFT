@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <title>TFT Tabelle</title>
+    <link rel="stylesheet" href="./Tabelle Big.css">
+
+</head>
+
+<body>
+  <img src="./TabelleBIG.png">
+  <div class="Tabelle">
+    <span class="Zeile0 Spalte1 Spieler">Spieler*in</span>
+    <span class="Zeile0 Spalte2 Punkte">Pkt</span>
+    <span id="TabelleSpieler1" class="Zeile1 Spalte1 Spieler"></span>
+    <span id="TabelleSpieler2" class="Zeile2 Spalte1 Spieler"></span>
+    <span id="TabelleSpieler3" class="Zeile3 Spalte1 Spieler"></span>
+    <span id="TabelleSpieler4" class="Zeile4 Spalte1 Spieler"></span>
+    <span id="TabelleSpieler5" class="Zeile5 Spalte1 Spieler"></span>
+    <span id="TabelleSpieler6" class="Zeile6 Spalte1 Spieler"></span>
+    <span id="TabelleSpieler7" class="Zeile7 Spalte1 Spieler"></span>
+    <span id="TabelleSpieler8" class="Zeile8 Spalte1 Spieler"></span>
+
+    <span id="TabellePunkte1" class="Zeile1 Spalte2 Punkte"></span>
+    <span id="TabellePunkte2" class="Zeile2 Spalte2 Punkte"></span>
+    <span id="TabellePunkte3" class="Zeile3 Spalte2 Punkte"></span>
+    <span id="TabellePunkte4" class="Zeile4 Spalte2 Punkte"></span>
+    <span id="TabellePunkte5" class="Zeile5 Spalte2 Punkte"></span>
+    <span id="TabellePunkte6" class="Zeile6 Spalte2 Punkte"></span>
+    <span id="TabellePunkte7" class="Zeile7 Spalte2 Punkte"></span>
+    <span id="TabellePunkte8" class="Zeile8 Spalte2 Punkte"></span>
+  </div>
+  <div class="Tabelle">
+    <span class="Zeile0 Spalte3 Spieler">Spieler*in</span>
+    <span class="Zeile0 Spalte4 Punkte">Pkt</span>
+    <span id="TabelleSpieler9" class="Zeile1 Spalte3 Spieler"></span>
+    <span id="TabelleSpieler10" class="Zeile2 Spalte3 Spieler"></span>
+    <span id="TabelleSpieler11" class="Zeile3 Spalte3 Spieler"></span>
+    <span id="TabelleSpieler12" class="Zeile4 Spalte3 Spieler"></span>
+    <span id="TabelleSpieler13" class="Zeile5 Spalte3 Spieler"></span>
+    <span id="TabelleSpieler14" class="Zeile6 Spalte3 Spieler"></span>
+    <span id="TabelleSpieler15" class="Zeile7 Spalte3 Spieler"></span>
+    <span id="TabelleSpieler16" class="Zeile8 Spalte3 Spieler"></span>
+
+    <span id="TabellePunkte9" class="Zeile1 Spalte4 Punkte"></span>
+    <span id="TabellePunkte10" class="Zeile2 Spalte4 Punkte"></span>
+    <span id="TabellePunkte11" class="Zeile3 Spalte4 Punkte"></span>
+    <span id="TabellePunkte12" class="Zeile4 Spalte4 Punkte"></span>
+    <span id="TabellePunkte13" class="Zeile5 Spalte4 Punkte"></span>
+    <span id="TabellePunkte14" class="Zeile6 Spalte4 Punkte"></span>
+    <span id="TabellePunkte15" class="Zeile7 Spalte4 Punkte"></span>
+    <span id="TabellePunkte16" class="Zeile8 Spalte4 Punkte"></span>
+  </div>
+
+    <!-- JAVASCRIPT STUFF -->
+    <script src="./Updater.js"></script>
+    <script src="./regex-operation.js"></script>
+    <script>
+        const settings = {
+            'string': {
+              'B4' :'TabelleSpieler1',
+              'B5' :'TabelleSpieler2',
+              'B6' :'TabelleSpieler3',
+              'B7' :'TabelleSpieler4',
+              'B8' :'TabelleSpieler5',
+              'B9' :'TabelleSpieler6',
+              'B10' :'TabelleSpieler7',
+              'B11' :'TabelleSpieler8',
+              'B12' :'TabellePunkte1',
+              'B13' :'TabellePunkte2',
+              'B14' :'TabellePunkte3',
+              'B15' :'TabellePunkte4',
+              'B16' :'TabellePunkte5',
+              'B17' :'TabellePunkte6',
+              'B18' :'TabellePunkte7',
+              'B19' :'TabellePunkte8',
+              'B20' :'TabelleSpieler9',
+              'B21' :'TabelleSpieler10',
+              'B22' :'TabelleSpieler11',
+              'B23' :'TabelleSpieler12',
+              'B24' :'TabelleSpieler13',
+              'B25' :'TabelleSpieler14',
+              'B26' :'TabelleSpieler15',
+              'B27' :'TabelleSpieler16',
+              'B28' :'TabellePunkte9',
+              'B29' :'TabellePunkte10',
+              'B30' :'TabellePunkte11',
+              'B31' :'TabellePunkte12',
+              'B32' :'TabellePunkte13',
+              'B33' :'TabellePunkte14',
+              'B34' :'TabellePunkte15',
+              'B35' :'TabellePunkte16',
+        }}
+
+        const spreadsheetID = '1ZGBhSTBxykZOjKmOdzKOPGLR2U7vP7C99gbdYNboM2c';
+        const worksheetName = 'Output';
+        const apiKey = "AIzaSyCpf1Yn1B7b4P9W5sazp6EcfgDM0Ati2Zg";
+        const updateInterval = 3000;
+
+        const u = new GraphicsUpdater(settings, spreadsheetID, worksheetName, apiKey, updateInterval, false);
+        u.addOperation('regex', regexOperation);
+        u.startUpdating();
+    </script>
+</body>
